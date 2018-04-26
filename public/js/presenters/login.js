@@ -11,6 +11,8 @@ Login.init = function () {
 
   EventBus.on('view:logout:request', EventBus.trigger.bind(EventBus, 'api:logout'))
 
+  EventBus.on('view:update-profile:request', EventBus.trigger.bind(EventBus, 'api:update-profile'))
+
 }
 
 module.exports = Login

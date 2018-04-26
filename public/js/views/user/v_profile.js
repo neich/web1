@@ -5,6 +5,7 @@ var UserProfile = Backbone.View.extend({
 
     initialize: function(params) {
         this.eventBus = params.eventBus;
+        this.model = params.model;
     },
 
     template: _.template(t_profile),

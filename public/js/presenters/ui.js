@@ -6,6 +6,7 @@ var MainPostFeedCollection = require("../collections/c_post_feed")
 var UserLogin = require("../views/user/v_login")
 var UserSignup = require("../views/user/v_signup")
 var UserProfile = require("../views/user/v_profile")
+var UserProfileEdit = require("../views/user/v_profile_edit")
 var HeaderView = require("../views/header")
 var OrdersView = require("../views/order/vl_orders")
 var MainPostFeedCollectionView = require("../views/post/vl_post_feed")
@@ -73,6 +74,25 @@ Ui.switchContent = function (widget) {
             Ui.switchContent('login')
         break
     }
+    case 'profile-edit': {
+      if (localStorage.hasItem('user')) {
+        
+          $('.navbar').removeClass('hidden')
+          var user = localStorage.getItem('user')
+          var usrModel = new ModelUser({id: user.id})
+          usrModel.fetch({
+              success: function (response) {
+                lastContent = new UserProfileEdit({el: $content, eventBus: EventBus, model: usrModel}).render()
+                  if (lastHeader) lastHeader.undelegateEvents()
+                  lastHeader = new HeaderView({el: '#header', eventBus: EventBus, user: user}).render()
+              },
+              error: Ui.error
+          });
+      }
+      else
+          Ui.switchContent('login')
+      break
+    }
   }
 }
 
@@ -93,6 +113,7 @@ Ui.showSignup = function () {
 
 // This always receive a JSON object with a standard API error
 Ui.error = function (err) {
+  console.log(err);
   if (err.message)
     alert("Error: " + err.message)
   else if (err.responseJSON) {
@@ -108,6 +129,8 @@ EventBus.on('ui:showError', Ui.error)
 EventBus.on('ui:switch:signup', Ui.showSignup)
 // EventBus.on('ui:switch:orders', Ui.switchContent.bind(null, 'orders'))
 EventBus.on('ui:showProfile',Ui.switchContent.bind(null, 'profile'))
+EventBus.on('ui:showProfileEdit',Ui.switchContent.bind(null, 'profile-edit'))
+
 EventBus.on('ui:showLogin',Ui.switchContent.bind(null, 'login'))
 EventBus.on('ui:showFeed',Ui.switchContent.bind(null, 'feed'))
 

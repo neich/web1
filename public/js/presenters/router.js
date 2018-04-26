@@ -12,6 +12,7 @@ Router.init = function () {
       'login': 'showLogin',
       'orders': 'showOrders',
       'profile': 'showProfile',
+      'profile-edit': 'showProfileEdit',
       'feed': 'showFeed',
 
       // Default
@@ -36,6 +37,9 @@ Router.init = function () {
 
     showProfile: function () {
         EventBus.trigger('ui:showProfile')
+    },
+    showProfileEdit: function() {
+      EventBus.trigger('ui:showProfileEdit')
     },
 
     showLogin: function () {

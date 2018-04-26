@@ -84,7 +84,7 @@ Api.init = function () {
       .catch(EventBus.trigger.bind(EventBus, 'api:signup:error'))
       .done()
   })
-  // Signup successful
+    // Signup successful
   EventBus.on('api:signup:succesful', function (usr_name, password) {
       Api.login({username: usr_name, password: password})
           .then(EventBus.trigger.bind(EventBus, 'api:signup:login'))
@@ -92,6 +92,33 @@ Api.init = function () {
           .done()
 
   })
+
+  // update profile
+  EventBus.on('api:update-profile', function (id, data) {
+    $.ajax({
+      url: '/api/users/' + id,
+      dataType: 'json',
+      type: 'PUT',
+      contentType: 'application/json',
+      data: JSON.stringify(data),
+      processData: false,
+    })
+    .then(() => {
+      alert('Successfully updated profile!')
+      Router.router.navigate('/profile', { trigger: true })
+    })
+    .catch(EventBus.trigger.bind(EventBus, 'ui:showError'))
+
+
+    // var usr_name = data.username
+    // var password = data.password
+    // Api.signup(data)
+    //   .then(EventBus.trigger.bind(EventBus, 'api:signup:succesful', usr_name, password))
+    //   .catch(EventBus.trigger.bind(EventBus, 'api:signup:error'))
+    //   .done()
+  })
+
+  
 
   EventBus.on('api:signup:login', function (user) {
     localStorage.setItem('user', user)

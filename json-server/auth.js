@@ -127,6 +127,7 @@ module.exports = function (server, router) {
         }
     })
 
+
     server.get('/users/self', util.isAuthenticated, function (req, res) {
         var user = router.db.get('users').find(['id', req.session.userId]).value()
         util.jsonResponse(res, user)

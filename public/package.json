@@ -28,6 +28,6 @@
   },
   "scripts": {
     "webpack": "webpack",
-    "constant-webpack":"webpack --watch"
+    "constant-webpack": "webpack --watch"
   }
 }
