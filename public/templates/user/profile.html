@@ -1,0 +1,102 @@
+<div id="profilebox" style="margin-top:100px" class="mainbox">
+
+<div class="userInfo">
+	<div class="col-md-4">
+		<div class="profileimg"><img src="<%= user.get('profile_photo') %>"></div> <!-- a editar al css treure img src i posar backgroun !-->
+	</div>
+	<div class ="col-md-8"> <!-- columna superior perfil!-->
+		<div class = "user_name">
+			<div class="col-md-2"><div class="user_title"> <%= user.get('username') %> </div>
+			</div>
+			<div class ="col-md-2"><div class="followbutton">FOLLOW</div>
+			<div class ="col-md-2"><div class="followbutton">EDIT PROFILE</div>
+			</div>
+		</div>
+		<div class="stats"> <!--posts, followers, following !-->
+			<div class = "col-md-2"><div class="statsinfo"></div>Posts: <%= user.get('posts') %></div>
+			<div class = "col-md-2"><div class="statsinfo"></div>Following: <%= user.get('following') %> </div>
+			<div class = "col-md-2"><div class="statsinfo"></div>Followers: <%= user.get('followers') %> </div>
+		</div>
+		<div class="userbio">
+			<div class="col-md-8">
+				<%= user.get('bio') %> <!-- user bio !-->
+			</div>
+		</div>
+		<div class="userurl">
+			<div class="col-md-2">
+				<%= user.get('url') %> <!-- user url !-->
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="userPhotos">
+	<div class="col-md-12"> <!-- cos on apareixeran les fotografies !-->
+		<div  class="filaFoto"> <!-- cada fila amb 3 fotos !-->
+			<div class="col-md-12">
+						<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+			</div>
+		</div>
+		<div  class="filaFoto">
+			<div class="col-md-12">
+						<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+			</div>
+		</div>
+		<div  class="filaFoto">
+			<div class="col-md-12">
+						<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="photoBio">
+				<%= user.get('placeholder') %> <!-- a carregar dinamicament!-->
+			</div>
+		</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+ 

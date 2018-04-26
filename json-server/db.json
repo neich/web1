@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "anicolau",
+      "email": "anicolau@pew.com",
+      "password": "anicolau",
+      "first_name": "Adrià",
+      "last_name": "Nicolau",
+      "date_created": "Fri Mar 16 2018 20:44:41 GMT+0100 (CET)",
+      "date_updated": "Fri Mar 16 2018 20:44:41 GMT+0100 (CET)"
+    },
+    {
+      "id": 2,
+      "username": "destañol",
+      "email": "destañol@pew.com",
+      "password": "destañol",
+      "first_name": "Daniel",
+      "last_name": "Estañol",
+      "date_created": "Fri Mar 16 2018 20:44:42 GMT+0100 (CET)",
+      "date_updated": "Fri Mar 16 2018 20:44:42 GMT+0100 (CET)"
+    },
+    {
+      "id": 3,
+      "username": "pmunyoz",
+      "email": "pmunyoz@pew.com",
+      "password": "pmunyoz",
+      "first_name": "Pau",
+      "last_name": "Munyoz",
+      "date_created": "Fri Mar 16 2018 20:44:43 GMT+0100 (CET)",
+      "date_updated": "Fri Mar 16 2018 20:44:43 GMT+0100 (CET)"
+    },
+    {
+      "id": 4,
+      "username": "ebota",
+      "email": "ebota@pew.com",
+      "password": "ebota",
+      "first_name": "Emili",
+      "last_name": "Bota",
+      "date_created": "Fri Mar 16 2018 20:44:44 GMT+0100 (CET)",
+      "date_updated": "Fri Mar 16 2018 20:44:44 GMT+0100 (CET)"
+    }
+  ],
+  "images": [],
+  "posts": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 4,
+      "user_id": 2,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 5,
+      "user_id": 3,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 6,
+      "user_id": 4,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 7,
+      "user_id": 2,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 8,
+      "user_id": 4,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 9,
+      "user_id": 3,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "description": "This is the description",
+      "picture": "This is the picture"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
